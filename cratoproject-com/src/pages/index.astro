@@ -2,11 +2,21 @@
 import { Button } from '@/components/ui/button'
 import Layout from '../layouts/Layout.astro'
 import '../../globals.css'
+import Logo from '../assets/crato-logo.svg'
 ---
 
 <Layout title='Crato Project'>
 	<main>
-		<h1 class='text-blue-500 bg-red-6'>Crato Project</h1>
-		<Button>Test</Button>
+		<header>
+			<div>
+				<img src={Logo.src} alt='image description' />
+			</div>
+		</header>
+		<div class='flex w-screen items-start'>
+			<div id='content' class='flex flex-col items-center h-dvh w-screen overflow-auto bg-muted/40'>
+				<h1 class='text-blue-500 bg-red-6'>Crato Project</h1>
+				<Button>Test</Button>
+			</div>
+		</div>
 	</main>
 </Layout>

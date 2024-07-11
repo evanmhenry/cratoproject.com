@@ -1,12 +1,8 @@
+/* eslint-disable react-refresh/only-export-components */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Link } from 'react-router-dom'
 import { InstagramIcon, TwitterIcon } from '@/components/icons/SocialIcon'
-import path from 'path'
 
 export const ApplicationName = 'Crato Project'
-
-const EMAIL = 'info@placeholder.com'
-const SUBJECT = 'General Inquiry'
 
 export const PrimaryCta = 'Get Started'
 export const SecondaryCta = 'Learn More'
@@ -136,27 +132,6 @@ export const FeatureList = [
 	},
 ]
 
-// export const PricingOptions = [
-// 	{
-// 		name: 'Free Trial',
-// 		price: 'Free',
-// 		description: 'Start with a free trial to explore our platform.',
-// 		bullets: ['30-day free trial', 'Platform setup', 'System integration', 'Customer support'],
-// 		cta: PrimaryCta,
-// 		primary: false,
-// 		action: handlePrimaryCtaClick,
-// 	},
-// 	{
-// 		name: 'Premium',
-// 		price: 'Contact Us',
-// 		description: 'Ideal for businesses with multiple locations.',
-// 		bullets: ['Advanced features', 'Multiple configurations', 'Priority support', 'Custom integrations'],
-// 		cta: PrimaryCta,
-// 		primary: true,
-// 		action: handlePrimaryCtaClick,
-// 	},
-// ]
-
 export const FaqDescription = 'Frequently Asked Questions'
 export const FaqList = [
 	{
@@ -182,11 +157,11 @@ export const GetStartedTitle = 'Simplify Your Health'
 export const FooterSections = [
 	{
 		title: 'Guides',
-		items: [{ label: 'Support', link: `mailto:${EMAIL}` }],
+		items: [{ label: 'Testosterone Optimization', path: '' }],
 	},
 	{
 		title: 'Brand',
-		items: [{ label: 'About Us', link: '/about' }],
+		items: [{ label: 'About Us', path: '/about' }],
 	},
 ]
 

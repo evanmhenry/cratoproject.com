@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 
 type LinkItem = {
 	label: string
-	link: string
+	path: string
 }
 
 type FooterLinksProps = {
@@ -17,7 +17,7 @@ const FooterLinks = ({ title, items }: FooterLinksProps) => (
 	<div className='flex flex-col items-start gap-2 md:w-40'>
 		<div className='text-md font-semibold mb-1'>{title}</div>
 		{items.map((item) => (
-			<a key={item.label} href={item.link} className='inline-block text-primary/55 hover:text-primary'>
+			<a key={item.label} href={item.path} className='inline-block text-primary/55 hover:text-primary'>
 				{item.label}
 			</a>
 		))}

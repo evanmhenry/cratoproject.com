@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from 'react'
 
 // TODO: make this work / populate based on the current page
-const TableOfContents = ({ contents }) => {
+const TableOfContents = ({ contents }: { contents: any[] }) => {
 	const [activeId, setActiveId] = useState('')
 
 	useEffect(() => {
@@ -20,8 +21,7 @@ const TableOfContents = ({ contents }) => {
 		return () => document.removeEventListener('scroll', handleScroll)
 	}, [contents])
 
-	const handleLinkClick = (e, id) => {
-		e.preventDefault()
+	const handleLinkClick = (id: string) => {
 		const section = document.getElementById(id)
 		if (section) {
 			section.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -35,7 +35,7 @@ const TableOfContents = ({ contents }) => {
 				<div key={content.id} className={`pl-${content.level * 4} mb-2`}>
 					<a
 						href={`#${content.id}`}
-						onClick={(e) => handleLinkClick(e, content.id)}
+						onClick={() => handleLinkClick(content.id)}
 						className={`hover:text-brand ${activeId === content.id ? 'font-semibold' : 'text-muted-foreground'}`}
 					>
 						{content.title}
